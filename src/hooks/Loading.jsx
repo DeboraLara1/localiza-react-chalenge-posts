@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LoadingSpinner from "../components/Loadingspinner"; // Certifique-se de importar o componente corretamente
+import LoadingSpinner from "../components/Loadingspinner";
 
 const useLoading = () => {
   const [loading, setLoading] = useState(null);
@@ -13,7 +13,7 @@ const useLoading = () => {
     loading,
     startLoading,
     stopLoading,
-    LoadingIndicator, // Reutilizável em qualquer lugar
+    LoadingIndicator, 
   };
 };
 
