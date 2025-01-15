@@ -1,4 +1,4 @@
-import PostItem from './PostItem';
+import { PostItem } from '../index';
 
 const PostList = ({ posts, onEdit, onDelete }) => {
   return (

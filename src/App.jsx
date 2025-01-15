@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import PostList from "./components/PostList";
-import PostForm from "./components/PostForm";
 import { getPosts, createPost, updatePost, deletePost } from "./services/api";
-import Notification from "./components/Notification"; 
+import { PostList, PostForm, Notification } from './components';
+
 
 export function App() {
   const [posts, setPosts] = useState([]);

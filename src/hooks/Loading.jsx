@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LoadingSpinner from "../components/Loadingspinner";
+import { Loadingspinner } from '../components';
 
 const useLoading = () => {
   const [loading, setLoading] = useState(null);

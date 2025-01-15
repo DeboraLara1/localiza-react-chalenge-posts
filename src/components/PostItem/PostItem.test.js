@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import PostItem from './PostItem';
-import * as LoadingHook from '../hooks/loading'; 
+import * as LoadingHook from '../../hooks/loading'; 
 
 jest.mock('../hooks/loading'); 
 jest.mock('./Loadingspinner', () => () => <div>Loading...</div>); 

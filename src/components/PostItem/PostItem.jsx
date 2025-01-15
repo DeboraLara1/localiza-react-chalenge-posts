@@ -1,5 +1,5 @@
-import Loadingspinner from "./Loadingspinner";
-import  Loading  from "../hooks/loading";
+import  Loading  from "../../hooks/Loading";
+import { Loadingspinner } from '../index';
 
 const PostItem = ({ post, onEdit, onDelete }) => {
   const { loading, startLoading, stopLoading } = Loading();
