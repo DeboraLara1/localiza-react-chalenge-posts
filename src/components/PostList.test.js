@@ -15,7 +15,6 @@ describe('PostList', () => {
   test('Renderiza postagens corretamente', () => {
     render(<PostList posts={mockPosts} onEdit={mockOnEdit} onDelete={mockOnDelete} />);
 
-    // Verifica se os títulos dos posts estão na tela
     expect(screen.getByText('Post 1')).toBeInTheDocument();
     expect(screen.getByText('Post 2')).toBeInTheDocument();
   });
@@ -23,7 +22,6 @@ describe('PostList', () => {
   test('Não renderiza posts quando a matriz está vazia', () => {
     render(<PostList posts={[]} onEdit={mockOnEdit} onDelete={mockOnDelete} />);
 
-    // Verifica se nenhum post está na tela
     expect(screen.queryByText('Post 1')).not.toBeInTheDocument();
     expect(screen.queryByText('Post 2')).not.toBeInTheDocument();
   });

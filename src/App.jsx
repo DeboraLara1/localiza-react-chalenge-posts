@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import PostList from "./components/PostList";
 import PostForm from "./components/PostForm";
 import { getPosts, createPost, updatePost, deletePost } from "./services/api";
-import Notification from "./components/Notification"; // Importe o componente Notification
+import Notification from "./components/Notification"; 
 
 export function App() {
   const [posts, setPosts] = useState([]);
   const [editingPost, setEditingPost] = useState(null);
-  const [notification, setNotification] = useState({ message: "", type: "" }); // Estado para a notificação
+  const [notification, setNotification] = useState({ message: "", type: "" }); 
 
   useEffect(() => {
     const loadPosts = async () => {
@@ -59,7 +59,7 @@ export function App() {
           onSubmit={handleSavePost}
           editingPost={editingPost}
           setEditingPost={setEditingPost}
-          handleCancel={handleCancelEdit} // Passa a função de cancelamento
+          handleCancel={handleCancelEdit} 
         />
         <PostList posts={posts} onEdit={setEditingPost} onDelete={handleDeletePost} />
       </div>

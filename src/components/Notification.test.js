@@ -32,12 +32,11 @@ describe('Notification Component', () => {
   });
 
   test('Chama onClose após 2 segundos', () => {
-    jest.useFakeTimers(); // Finge os timers para controlar o tempo no teste
+    jest.useFakeTimers(); 
     render(<Notification message="Teste de fechamento" type="success" onClose={mockOnClose} />);
 
     expect(mockOnClose).not.toHaveBeenCalled();
 
-    // Avança o tempo em 2 segundos
     jest.advanceTimersByTime(2000);
 
     expect(mockOnClose).toHaveBeenCalledTimes(1);
@@ -53,7 +52,6 @@ describe('Notification Component', () => {
 
     jest.advanceTimersByTime(2000);
 
-    // Garante que onClose não é chamado após desmontar
     expect(mockOnClose).not.toHaveBeenCalled();
   });
 });
